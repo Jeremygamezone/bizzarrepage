@@ -1,6 +1,3 @@
-# Autentica de mi Pueblo - Raicilla Artesanal
-Domain: [autenticademipueblo.com](https://autenticademipueblo.com)
-
 # Setup Dev Environment:
 ## 🚀 Project Structure
 
