@@ -1,0 +1,35 @@
+{
+  "name": "autenticademipueblo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "dev-build": "rm -rf ./dist && yarn build && yarn preview",
+    "http-server": "rm -rf ./dist && yarn build && cd ./dist && npx http-server -c-1"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.7.0",
+    "@astrojs/react": "3.6.0",
+    "@astrojs/tailwind": "5.1.0",
+    "@astrojs/vue": "4.5.0",
+    "@fontsource/poppins": "5.0.14",
+    "@fontsource/taviraj": "5.0.20",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "astro": "4.9.3",
+    "astro-icon": "^1.1.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.4.5",
+    "vue": "3.4.32"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "vite": "^7.3.1"
+  }
+}

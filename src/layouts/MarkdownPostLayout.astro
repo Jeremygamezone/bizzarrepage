@@ -1,0 +1,28 @@
+---
+import PageLayout from './PageLayout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<PageLayout>
+    <div class="max-w-4xl mx-auto px-4 py-20 text-white">
+        <div class="mb-3">
+            <img
+                src={frontmatter.image.url}
+                alt={frontmatter.image.alt}
+                class="w-full h-auto object-cover rounded-lg shadow-lg"
+            />
+        </div>
+
+        <p class="text-gray-400 mb-2">{frontmatter.pubDate.toString().slice(0, 10)}</p>
+
+        <p class="text-lg mb-2"><em>{frontmatter.description}</em></p>
+
+        <p class="text-gray-300 mb-8">Escrito por: <span class="font-semibold">{frontmatter.author}</span></p>
+
+        <h1 class="text-4xl font-bold mb-7">{frontmatter.title}</h1>
+
+        <div class="prose prose-md max-w-none prose-invert lg:prose-lg">
+            <slot />
+        </div>
+    </div>
+</PageLayout>

@@ -1,0 +1,74 @@
+---
+import type { IMetadata } from '../types/Metadata';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const metadata: IMetadata = {
+    description:
+        'Pagina de presentacion para portafolio de Jeremy',
+    title:
+        'Bizzarrest'
+};
+---
+
+<PageLayout {...metadata}>
+    <img src="/FirmaBlanco.png" alt="Sample Image" class="flex items-center justify-center mx-auto">
+    <div class="flex items-center justify-center w-[100wv] flex-col py-4">
+        <div class="flex align-middle justify-between md:flex-row gap-0 md:gap-20 px-4 md:px-12 flex-col-reverse mb-20">
+            <div class="text-white flex align-middle justify-center flex-col md:w-1/2 gap-4 text-center md:text-left w-full">
+                <h1 class="text-2xl md:text-5xl font-agave font-bold">Jeremy Phillipe Castañeda Arceo</h1>
+                <p>Persona comunicativa, amable y con capacidad de adaptación rápida dentro del entorno en el que se 
+                    encuentre, en busca de una oportunidad para ejercer una carrera como desarrollador Senior y 
+                    demostrar mi compromiso </p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center items-center">
+        <video
+        class="ease-in-out object-center object-cover h-[30vh] w-[100vw] "
+        autoplay=""
+        loop=""
+        muted=""
+        playsinline=""
+    >
+        <source src="/videos/3ds001.mp4" type="video/mp4" />
+    </video>
+    </div>
+    <div class="text-white p-10 max-w-7xl w-full mx-auto my-5 h-[40vh] ">
+            <h1 class="text-4xl text-white font-agave text-center pt-3">Mi arte y conocimientos</h1>
+            <h2 class="text-lg text-blue-400 text-center pb-3"><b>¿Por qué elegirme a mí?</b></h2><br>
+            <h4 class="w-[60vw]">Adéntrate a revisar mi trabajo en animación y modelaje 3D. Estoy certificado como generalista 3D en Blender,
+                lo que significa que tengo los fundamentos del modelaje, animación, esculpido digital, efectos especiales y creación de assets
+                para juegos.
+            </h4>
+            <h4 class="w-[60vw]">
+                Aspiro a crear contenido de calidad en forma de animaciones con narrativa única o con propósito publicitario. Asímismo,
+                busco realizar modelos de personaje y entornos para el desarrollo de juegos.
+            </h4>
+    </div>
+    
+    <div class="flex-col justify-center items-center columns-2 m-0">
+        <div class="flex justify-center items-center">
+            <video
+                class="ease-in-out object-cover h-[30vh] w-[50vw]"
+                autoplay=""
+                loop=""
+                muted=""
+                playsinline=""
+            >
+                <source src="/videos/dbc.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="flex justify-center items-center">
+            <video
+                class="ease-in-out object-cover h-[30vh] w-[50vw] bg-center"
+                autoplay=""
+                loop=""
+                muted=""
+                playsinline=""
+            >
+                <source src="/videos/Intro Sin Audio.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+    
+</PageLayout>

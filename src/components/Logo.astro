@@ -1,0 +1,9 @@
+---
+const { isAbsolute = true } = Astro.props;
+---
+
+<img    
+    src="/images/MHWicon.png"
+    alt="MHW"
+    class={`${isAbsolute ? 'absolute top-0 left-1/2 -translate-x-1/2 ' : 'mx-auto'} my-3 z-20 pointer-events-none select-none`}
+/>

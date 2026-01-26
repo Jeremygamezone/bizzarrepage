@@ -1,0 +1,22 @@
+---
+import type { IMetadata } from '../types/Metadata';
+const metadata: IMetadata = {};
+import ParallaxBanner from '../components/ParallaxBanner';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout {...metadata}>
+    <ParallaxBanner
+        bgClassName="bg-[url('/self003.jpg')] bg-[center_-600px]"
+        fadeIn={false}
+        className="text-white flex items-center justify-center "
+    >
+        <div class="w-full h-screen flex items-center justify-center bg-black bg-opacity-70">
+            <div class="text-center flex flex-col gap-10">
+                <p class="text-9xl">404</p>
+                <p class="text-3xl">OH-ho, ocurrió un problema. Esta página no existe</p>
+                <a href="/" class="button-teak-gradient px-4 py-2 block rounded w-fit h-fit mx-auto">Regresar</a>
+            </div>
+        </div>
+    </ParallaxBanner>
+</PageLayout>
