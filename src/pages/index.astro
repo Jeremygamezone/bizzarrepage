@@ -13,200 +13,204 @@ const metadata: IMetadata = {
 
 <PageLayout {...metadata}>
     <style>
-    .carousel{
-        margin: 100px auto;
-        widht: 90%;
-        display: flex;
-        overflow-x: auto;
-        gap: 1em;
-    }
+        .carousel {
+            margin: 100px auto;
+            widht: 90%;
+            display: flex;
+            overflow-x: auto;
+            gap: 1em;
+            background-color: rgb(0,0,0,.60);
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
 
-    .carousel::-webkit-scrollbar{
-        display: none;
-    }
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
 
-    .group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        animation: spin 30s infinite linear;
-        padding-right: 1em;
-    }
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            animation: spin 30s infinite linear;
+            padding-right: 1em;
+        }
 
-    .card{
-        flex: 0 0 5em;
-        height: 5em;
-        font-size: 3rem;
-        background-color: hsla(0, 0%, 81%, 0.116);
-        border-radius: 1em;
-        text-align: center;
-        align-content: center;
-        object-fit: cover;
-    }
+        .card {
+            flex: 0 0 5em;
+            height: 5em;
+            font-size: 3rem;
+            border-radius: 1em;
+            text-align: center;
+            align-content: center;
+            object-fit: cover;
+        }
 
-    @keyframes spin{
-        from {translate: 0;}
-        to {translate: -100%;}
-    }
+        @keyframes spin {
+            from {
+                translate: 0;
+            }
+            to {
+                translate: -100%;
+            }
+        }
     </style>
     <div id="main">
         <!-- Hero Intro -->
-        <ParallaxBanner bgClassName="bg-[url('/back01.jpg')] bg-repeat-y" client:load className="h-auto">
-            <div class="text-center p-6 text-white backdrop-blur-md bg-red-800 bg-opacity-10">
-                <div class="h-20"></div>
-                <div class="p-12 leading-relaxed w-full md:w-3/4 mx-auto">
-                    <h2 class="text-5xl">Jeremy P. Castañeda Arceo</h2>
-                    <h2 class="text-5xl">Desarrollador, artista y entusiasta de la tecnología.</h2>
-                    <br />
-                    <h2 class="text-2xl text-justify font-normal">
-                        Me especializo en la creación de aplicaciones web, campañas de marketing digital y gestión de
-                        bases de datos, combinando desarrollo, soporte técnico e infraestructura para construir
-                        soluciones digitales eficientes.
-                    </h2>
-                </div>
+        <ParallaxBanner bgClassName="bg-[url('/public/back01.jpg')] bg-repeat-y" client:load className="h-auto">
+            <div class="text-center text-white backdrop-blur-md bg-red-800 bg-opacity-10 pt-8">
+                <div class="w-4/5 md:w-3/4 mx-auto py-8 px-8">
+                    <div class="leading-relaxed w-full mx-auto py-4">
+                        <h2 class="text-5xl my-12">Jeremy P. Castañeda Arceo</h2>
+                        <h2 class="text-4xl text-left">Desarrollador, artista y entusiasta de la tecnología.</h2>
+                        <br />
+                        <h2 class="text-2xl text-left md:text-justify font-normal py-4">
+                            Me especializo en la creación de aplicaciones web, campañas de marketing digital y gestión
+                            de bases de datos, combinando desarrollo, soporte técnico e infraestructura para construir
+                            soluciones digitales eficientes.
+                        </h2>
+                    </div>
 
-                <div class="p-12" id="CV">
-                    <h2 class="text-3xl p-12">¡Revisa mi CV!</h2>
-                    <footer class="columns-1 md:columns-2 mx-auto">
-                        <a
-                            href="public/JPCADEVCV3.pdf"
-                            download="CVSpanish.pdf"
-                            class="lg bg-gradient-to-b from-red-300 to-red-800 text-white px-5 py-4 block rounded w-fit h-fit text-lg md:m-auto m-8 mx-auto"
-                            >Descargar CV español</a
-                        >
-                        <a
-                            href="public/JPCADEVCVE3.pdf"
-                            download="CVEnglish.pdf"
-                            class="lg bg-gradient-to-b from-blue-300 to-blue-800 text-white px-5 py-4 block rounded w-fit h-fit text-lg md:m-auto m-8 mx-auto"
-                            >Descargar CV inlgés</a
-                        >
-                    </footer>
+                    <div class="py-4" id="CV">
+                        <h2 class="text-3xl py-4">¡Revisa mi CV!</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-3 mx-auto">
+                            <a
+                                href="public/JPCADEVCV3.pdf"
+                                download="CVSpanish.pdf"
+                                class="lg bg-gradient-to-b from-red-400 to-red-800 text-white py-4 block rounded w-40 h-16 text-lg mx-auto my-8"
+                                >CV español</a
+                            >
+                            <a
+                                href="public/JPCADEVCVE3.pdf"
+                                download="CVEnglish.pdf"
+                                class="lg bg-gradient-to-b from-blue-400 to-blue-800 text-white py-4 block rounded w-40 h-16 text-lg mx-auto my-8"
+                                >CV inlgés</a
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
         </ParallaxBanner>
 
-        <section id="self" class="bg-neutral-900 text-white py-8 text-center font-normal">
-            <div class="w-3/4 mx-auto">
-                <header class="p-8 text-4xl font-semibold">
+        <section id="self" class="flex bg-neutral-900 text-white py-8text-center font-normal py-8">
+            <div class="mx-auto">
+                <header class="text-4xl font-semibold">
                     <h1>¿Quién soy?</h1>
                 </header>
             </div>
         </section>
 
-        <ParallaxBanner bgClassName="bg-[url('/back02.jpg')] bg-repeat-y" client:load className="h-auto">
-            <div class="grid justify-center w-full h-full px-4 bg-green-500 bg-opacity-10 backdrop-blur-md">
-                <div class="w-3/4 text-center mx-auto p-8 text-white font-normal">
-                    <p class="text-justify leading-relaxed text-xl">
-                        <img src="brands/utj2.png" class="float-right w-60 mx-7 rounded" alt="" />
-                        Soy egresado del programa de Técnico Superior Universitario en la Universidad Tecnológica de Jalisco
-                        , con formación en desarrollo web, bases de datos y tecnologías informáticas. A lo largo de mi trayectoria
-                        he trabajado en la creación de aplicaciones web, gestión de bases de datos y soporte tecnológico,
-                        integrando también conocimientos de diseño digital para desarrollar soluciones funcionales y bien
-                        estructuradas. <!-- Me caracterizo por mi capacidad de adaptación ante nuevos retos
+        <ParallaxBanner bgClassName="bg-[url('/public/back02.jpg')] bg-repeat-y" client:load className="h-auto">
+            <div class="grid justify-center w-full h-full bg-green-500 bg-opacity-10 backdrop-blur-md">
+                <div class="w-4/5 md:w-3/4 mx-auto py-8 bg-black bg-opacity-60 px-8">
+                    <div class="text-center flex text-white font-normal">
+                        <p class="text-2xl text-left md:text-justify font-normal">
+                            <img src="brands/utj2.png" class="float-right w-60 rounded mx-auto ml-4" alt="" />
+                            Soy egresado del programa de Técnico Superior Universitario en la Universidad Tecnológica de Jalisco
+                            , con formación en desarrollo web, bases de datos y tecnologías informáticas. A lo largo de mi
+                            trayectoria he trabajado en la creación de aplicaciones web, gestión de bases de datos y soporte
+                            tecnológico, integrando también conocimientos de diseño digital para desarrollar soluciones funcionales
+                            y bien estructuradas. <!-- Me caracterizo por mi capacidad de adaptación ante nuevos retos
                     tecnológicos y por mantener una actitud constante de aprendizaje, lo que me permite desenvolverme en
                     distintos entornos dentro del área de la tecnología y el desarrollo de software. -->
-                    </p>
+                        </p>
+                    </div>
                 </div>
             </div>
         </ParallaxBanner>
 
-        <section id="portafolio" class="bg-neutral-900 text-white py-8 text-center font-normal">
-            <div class="w-3/4 mx-auto mb-20">
-                <header class="p-8 text-4xl font-semibold">
+        <section id="portafolio" class="bg-neutral-900 text-white text-center font-normal">
+            <div class="w-4/5 md:w-3/4 mx-auto py-8 px-8">
+                <header class="text-4xl font-semibold">
                     <h1>Portafolio</h1>
                 </header>
-                <p class="text-justify text-xl">
+                <p class="text-2xl text-left md:text-justify font-normal">
                     He trabajado en una amplia variedad de áreas informáticas y de diseño, enfocando gran parte de mi
                     experiencia en la creación de soluciones digitales que se ajustan la necesidad de cada cliente. A lo
                     largo de mi trayectoria he participado en proyectos que abarcan implementaciones de diseño,
                     desarrollo web, gestión de base de datos y orientacón de marketing digital
                 </p>
                 <br />
-                <p class="text-justify text-xl">
+                <p class="text-2xl text-left md:text-justify font-normal">
                     Mi historial como desarrollador independiente con pequeñas y medianas empresas me ha permitido crear
                     una sólida capacidad para interpretar las necesidades de cada cliente y traducirlas en propuestas
                     visuales y soluciones digitales coherentes con su identidad. He aquí unos ejemplos de proyectos que
                     han salido adelante bajo mi cargo.
                 </p>
             </div>
-            <ParallaxBanner bgClassName="bg-[url('/back03.jpg')] bg-repeat-y" client:load className="h-auto">
-                <div class="grid justify-center w-full h-full px-4 bg-purple-900 bg-opacity-20 backdrop-blur-md my-8 py-8">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 w-3/4 mx-auto">
-                        <a href="https://warehouse.rayopack.com/" target="_blank"
-                            ><ProcessImg
-                                img="rayo01.jfif"
-                                title="Rayopack Warehouse"
-                                description="Sistema web con administración para el control sobre registros y rastreo de paquetes así como inventario automatizado."
-                            /></a
-                        >
+            <ParallaxBanner bgClassName="bg-[url('/public/back03.jpg')] bg-repeat-y" client:load className="h-auto">
+                <div class="justify-center w-full h-full bg-purple-900 bg-opacity-20 backdrop-blur-md">
+                    <div class="w-4/5 md:w-3/4 mx-auto py-8 bg-black bg-opacity-60">
+                        <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 mx-auto justify-items-center">
+                            <a href="https://warehouse.rayopack.com/" target="_blank"
+                                ><ProcessImg
+                                    img="rayo02.jfif"
+                                    title="Rayopack Warehouse"
+                                    description="Sistema web con administración de registros, rastreo de paquetes e inventario."
+                                /></a
+                            >
 
-                        <a href="https://bonefish.com.mx/" target="_blank"
-                            ><ProcessImg
-                                img="cover01.png"
-                                title="Bonefish x Sneaker Fever"
-                                description="Campaña de Marketing digital para la marca Bonefish celebrando su participación en el evento Sneaker Fever 2025."
-                            /></a
-                        >
+                            <a href="https://bonefish.com.mx/" target="_blank"
+                                ><!-- <ProcessImg
+                                    img="bonefish.jpg"
+                                    title="Bonefish x Sneaker Fever"
+                                    description="Campaña de Marketing digital para la marca Bonefish celebrando su participación en el evento Sneaker Fever 2025."
+                                /></a
+                            > -->
+                            <ProcessImg
+                                img="blender.png"
+                                title="Comisión personalizada"
+                                description="Servicio personalizado orientado a la creación de modelos y animaciones personales"
+                            />
 
-                        <!-- <a href="https://www.hellhype.com/" target="_blank"
-                            ><ProcessImg
-                                img="hellhype.png"
-                                title="HellHype"
-                                description="Campaña de Marketing digital para la marca HellHype Inaugurando su página web"
-                            /></a
-                        > -->
-                        <ProcessImg
-                            img="blender.png"
-                            title="Comisión personalizada"
-                            description="Servicio personalizado orientado a la creación de modelos y animaciones personales"
-                        />
-                        
-                        <a href="https://vspcomputer.mx/" target="_blank"
-                            ><ProcessImg
-                                img="VSP02.png"
-                                title="VSP Hikvision "
-                                description="Campaña de Marketing digital para la marca VSP anunciando su colaboración con Hikvision para distribuir e instalar su producto."
-                            /></a
-                        >
+                            <a href="https://vspcomputer.mx/" target="_blank"
+                                ><ProcessImg
+                                    img="VSP01.png"
+                                    title="VSP Hikvision "
+                                    description="Campaña de Marketing digital para la marca VSP anunciando su colaboración con Hikvision para distribuir e instalar su producto."
+                                /></a
+                            >
 
-                        <a href="https://laflordemayoneveria.com/" target="_blank"
-                            ><ProcessImg
-                                img="flor.png"
-                                title="Flor de mayo neveria"
-                                description="Elaboración de página web con sección de menú para mayor alcance en la red."
-                            /></a
-                        >
+                            <a href="https://laflordemayoneveria.com/" target="_blank"
+                                ><ProcessImg
+                                    img="flor.png"
+                                    title="Flor de mayo neveria"
+                                    description="Elaboración de página web con sección de menú para mayor alcance en la red."
+                                /></a
+                            >
 
-                        <a href="https://www.autenticademipueblo.com/" target="_blank"
-                            ><ProcessImg
-                                img="tequila.png"
-                                title="Autentica de mi pueblo"
-                                description="Elaboración de página web con sección de productos y fichas técnicas para su promoción."
-                            /></a
-                        >
+                            <a href="https://www.autenticademipueblo.com/" target="_blank"
+                                ><ProcessImg
+                                    img="tequila.png"
+                                    title="Autentica de mi pueblo"
+                                    description="Elaboración de página web con sección de productos y fichas técnicas para su promoción."
+                                /></a
+                            >
 
-                        <a
-                            href="https://open.spotify.com/intl-es/artist/5eWaavRvzbhNII6GnAXkGf?si=1503dca062174125"
-                            target="_blank"
-                            ><ProcessImg
-                                img="Portada01B.png"
-                                title="Chokodrillo"
-                                description="Creación de contenido multimedia para el músico autor Chokodrillo"
-                            /></a
-                        >
+                            <a
+                                href="https://open.spotify.com/intl-es/artist/5eWaavRvzbhNII6GnAXkGf?si=1503dca062174125"
+                                target="_blank"
+                                ><ProcessImg
+                                    img="portada01B.png"
+                                    title="Chokodrillo"
+                                    description="Creación de contenido multimedia y realización de portadas para sencillos musicales. "
+                                /></a
+                            >
+                        </div>
                     </div>
                 </div>
             </ParallaxBanner>
         </section>
+    </div>
 
-        <!-- <section id="galeria" class="bg-neutral-900 text-white text-center font-normal">
-            <div class="mx-auto">
-                <header class="p-12 text-4xl font-semibold">
+    <!-- <section id="galeria" class="bg-neutral-900 text-white text-center font-normal">
+            <div class="mx-auto py-8">
+                <header class="text-4xl font-semibold">
                     <h1>Galería</h1>
                 </header>
             </div>
-            <ParallaxBanner bgClassName="bg-[url('/back04.jpg')] bg-repeat-y" client:load className="h-auto">
+            <ParallaxBanner bgClassName="bg-[url('/public/back04.jpg')] bg-repeat-y" client:load className="h-auto">
                 <div class="backdrop-blur-md py-8 bg-yellow-500 bg-opacity-20">
                     <div class="carousel">
                         <div class="group">
@@ -285,6 +289,5 @@ const metadata: IMetadata = {
                 </div>
             </ParallaxBanner>
         </section> -->
-    </div>
-    <!-- HIDDEN -->
 </PageLayout>
+<!-- HIDDEN -->

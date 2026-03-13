@@ -1,8 +1,8 @@
 <template>
     <div class="my-auto py-6">
-        <img :src="`/brands/${img}`" alt=""
-            class="bg-neutral-700 rounded-3xl my-auto mx-auto w-56 h-auto object-cover shadow-lg">
-        <div class="p-4 text-white uppercase">
+        <img :src="`/public/brands/${img}`" alt=""
+            class="rounded-3xl my-auto mx-auto w-56 h-56 object-cover shadow-lg">
+        <div class="p-8 text-white uppercase">
             <h3 class="text-2xl p-4 font-bold">{{ title }}</h3>
             <p class="text-justify">{{ description }}</p>
         </div>
