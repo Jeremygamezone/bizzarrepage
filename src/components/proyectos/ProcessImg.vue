@@ -1,10 +1,10 @@
 <template>
-    <div class="py-6">
+    <div class="my-auto py-6">
         <img :src="`/brands/${img}`" alt=""
-            class="bg-blue-600 rounded-3xl my-5 mx-2 md:h-[30vh] lg:w-11/12">
-        <div class="py-4 text-white">
-            <h3 class="text-2xl">{{ title }}</h3>
-            <p>{{ description }}</p>
+            class="bg-neutral-700 rounded-3xl my-auto mx-auto w-56 h-auto object-cover shadow-lg">
+        <div class="p-4 text-white uppercase">
+            <h3 class="text-2xl p-4 font-bold">{{ title }}</h3>
+            <p class="text-justify">{{ description }}</p>
         </div>
     </div>
 </template>

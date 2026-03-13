@@ -1,74 +1,289 @@
 ---
 import type { IMetadata } from '../types/Metadata';
 import PageLayout from '../layouts/PageLayout.astro';
+import ParallaxBanner from '../components/ParallaxBanner';
+import ProcessImg from '../components/proyectos/ProcessImg.vue';
+import ProcessVideo from '../components/proyectos/ProcessVideo.vue';
 
 const metadata: IMetadata = {
-    description:
-        'Pagina de presentacion para portafolio de Jeremy',
-    title:
-        'Bizzarrest'
+    description: 'Pagina de presentacion para portafolio de Jeremy',
+    title: 'Bienvenido',
 };
 ---
 
 <PageLayout {...metadata}>
-    <img src="/FirmaBlanco.png" alt="Sample Image" class="flex items-center justify-center mx-auto">
-    <div class="flex items-center justify-center w-[100wv] flex-col py-4">
-        <div class="flex align-middle justify-between md:flex-row gap-0 md:gap-20 px-4 md:px-12 flex-col-reverse mb-20">
-            <div class="text-white flex align-middle justify-center flex-col md:w-1/2 gap-4 text-center md:text-left w-full">
-                <h1 class="text-2xl md:text-5xl font-agave font-bold">Jeremy Phillipe Castañeda Arceo</h1>
-                <p>Persona comunicativa, amable y con capacidad de adaptación rápida dentro del entorno en el que se 
-                    encuentre, en busca de una oportunidad para ejercer una carrera como desarrollador Senior y 
-                    demostrar mi compromiso </p>
+    <style>
+    .carousel{
+        margin: 100px auto;
+        widht: 90%;
+        display: flex;
+        overflow-x: auto;
+        gap: 1em;
+    }
+
+    .carousel::-webkit-scrollbar{
+        display: none;
+    }
+
+    .group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        animation: spin 30s infinite linear;
+        padding-right: 1em;
+    }
+
+    .card{
+        flex: 0 0 5em;
+        height: 5em;
+        font-size: 3rem;
+        background-color: hsla(0, 0%, 81%, 0.116);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+        object-fit: cover;
+    }
+
+    @keyframes spin{
+        from {translate: 0;}
+        to {translate: -100%;}
+    }
+    </style>
+    <div id="main">
+        <!-- Hero Intro -->
+        <ParallaxBanner bgClassName="bg-[url('/back01.jpg')] bg-repeat-y" client:load className="h-auto">
+            <div class="text-center p-6 text-white backdrop-blur-md bg-red-800 bg-opacity-10">
+                <div class="h-20"></div>
+                <div class="p-12 leading-relaxed w-full md:w-3/4 mx-auto">
+                    <h2 class="text-5xl">Jeremy P. Castañeda Arceo</h2>
+                    <h2 class="text-5xl">Desarrollador, artista y entusiasta de la tecnología.</h2>
+                    <br />
+                    <h2 class="text-2xl text-justify font-normal">
+                        Me especializo en la creación de aplicaciones web, campañas de marketing digital y gestión de
+                        bases de datos, combinando desarrollo, soporte técnico e infraestructura para construir
+                        soluciones digitales eficientes.
+                    </h2>
+                </div>
+
+                <div class="p-12" id="CV">
+                    <h2 class="text-3xl p-12">¡Revisa mi CV!</h2>
+                    <footer class="columns-1 md:columns-2 mx-auto">
+                        <a
+                            href="public/JPCADEVCV3.pdf"
+                            download="CVSpanish.pdf"
+                            class="lg bg-gradient-to-b from-red-300 to-red-800 text-white px-5 py-4 block rounded w-fit h-fit text-lg md:m-auto m-8 mx-auto"
+                            >Descargar CV español</a
+                        >
+                        <a
+                            href="public/JPCADEVCVE3.pdf"
+                            download="CVEnglish.pdf"
+                            class="lg bg-gradient-to-b from-blue-300 to-blue-800 text-white px-5 py-4 block rounded w-fit h-fit text-lg md:m-auto m-8 mx-auto"
+                            >Descargar CV inlgés</a
+                        >
+                    </footer>
+                </div>
             </div>
-        </div>
+        </ParallaxBanner>
+
+        <section id="self" class="bg-neutral-900 text-white py-8 text-center font-normal">
+            <div class="w-3/4 mx-auto">
+                <header class="p-8 text-4xl font-semibold">
+                    <h1>¿Quién soy?</h1>
+                </header>
+            </div>
+        </section>
+
+        <ParallaxBanner bgClassName="bg-[url('/back02.jpg')] bg-repeat-y" client:load className="h-auto">
+            <div class="grid justify-center w-full h-full px-4 bg-green-500 bg-opacity-10 backdrop-blur-md">
+                <div class="w-3/4 text-center mx-auto p-8 text-white font-normal">
+                    <p class="text-justify leading-relaxed text-xl">
+                        <img src="brands/utj2.png" class="float-right w-60 mx-7 rounded" alt="" />
+                        Soy egresado del programa de Técnico Superior Universitario en la Universidad Tecnológica de Jalisco
+                        , con formación en desarrollo web, bases de datos y tecnologías informáticas. A lo largo de mi trayectoria
+                        he trabajado en la creación de aplicaciones web, gestión de bases de datos y soporte tecnológico,
+                        integrando también conocimientos de diseño digital para desarrollar soluciones funcionales y bien
+                        estructuradas. <!-- Me caracterizo por mi capacidad de adaptación ante nuevos retos
+                    tecnológicos y por mantener una actitud constante de aprendizaje, lo que me permite desenvolverme en
+                    distintos entornos dentro del área de la tecnología y el desarrollo de software. -->
+                    </p>
+                </div>
+            </div>
+        </ParallaxBanner>
+
+        <section id="portafolio" class="bg-neutral-900 text-white py-8 text-center font-normal">
+            <div class="w-3/4 mx-auto mb-20">
+                <header class="p-8 text-4xl font-semibold">
+                    <h1>Portafolio</h1>
+                </header>
+                <p class="text-justify text-xl">
+                    He trabajado en una amplia variedad de áreas informáticas y de diseño, enfocando gran parte de mi
+                    experiencia en la creación de soluciones digitales que se ajustan la necesidad de cada cliente. A lo
+                    largo de mi trayectoria he participado en proyectos que abarcan implementaciones de diseño,
+                    desarrollo web, gestión de base de datos y orientacón de marketing digital
+                </p>
+                <br />
+                <p class="text-justify text-xl">
+                    Mi historial como desarrollador independiente con pequeñas y medianas empresas me ha permitido crear
+                    una sólida capacidad para interpretar las necesidades de cada cliente y traducirlas en propuestas
+                    visuales y soluciones digitales coherentes con su identidad. He aquí unos ejemplos de proyectos que
+                    han salido adelante bajo mi cargo.
+                </p>
+            </div>
+            <ParallaxBanner bgClassName="bg-[url('/back03.jpg')] bg-repeat-y" client:load className="h-auto">
+                <div class="grid justify-center w-full h-full px-4 bg-purple-900 bg-opacity-20 backdrop-blur-md my-8 py-8">
+                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 w-3/4 mx-auto">
+                        <a href="https://warehouse.rayopack.com/" target="_blank"
+                            ><ProcessImg
+                                img="rayo01.jfif"
+                                title="Rayopack Warehouse"
+                                description="Sistema web con administración para el control sobre registros y rastreo de paquetes así como inventario automatizado."
+                            /></a
+                        >
+
+                        <a href="https://bonefish.com.mx/" target="_blank"
+                            ><ProcessImg
+                                img="cover01.png"
+                                title="Bonefish x Sneaker Fever"
+                                description="Campaña de Marketing digital para la marca Bonefish celebrando su participación en el evento Sneaker Fever 2025."
+                            /></a
+                        >
+
+                        <!-- <a href="https://www.hellhype.com/" target="_blank"
+                            ><ProcessImg
+                                img="hellhype.png"
+                                title="HellHype"
+                                description="Campaña de Marketing digital para la marca HellHype Inaugurando su página web"
+                            /></a
+                        > -->
+                        <ProcessImg
+                            img="blender.png"
+                            title="Comisión personalizada"
+                            description="Servicio personalizado orientado a la creación de modelos y animaciones personales"
+                        />
+                        
+                        <a href="https://vspcomputer.mx/" target="_blank"
+                            ><ProcessImg
+                                img="VSP02.png"
+                                title="VSP Hikvision "
+                                description="Campaña de Marketing digital para la marca VSP anunciando su colaboración con Hikvision para distribuir e instalar su producto."
+                            /></a
+                        >
+
+                        <a href="https://laflordemayoneveria.com/" target="_blank"
+                            ><ProcessImg
+                                img="flor.png"
+                                title="Flor de mayo neveria"
+                                description="Elaboración de página web con sección de menú para mayor alcance en la red."
+                            /></a
+                        >
+
+                        <a href="https://www.autenticademipueblo.com/" target="_blank"
+                            ><ProcessImg
+                                img="tequila.png"
+                                title="Autentica de mi pueblo"
+                                description="Elaboración de página web con sección de productos y fichas técnicas para su promoción."
+                            /></a
+                        >
+
+                        <a
+                            href="https://open.spotify.com/intl-es/artist/5eWaavRvzbhNII6GnAXkGf?si=1503dca062174125"
+                            target="_blank"
+                            ><ProcessImg
+                                img="Portada01B.png"
+                                title="Chokodrillo"
+                                description="Creación de contenido multimedia para el músico autor Chokodrillo"
+                            /></a
+                        >
+                    </div>
+                </div>
+            </ParallaxBanner>
+        </section>
+
+        <!-- <section id="galeria" class="bg-neutral-900 text-white text-center font-normal">
+            <div class="mx-auto">
+                <header class="p-12 text-4xl font-semibold">
+                    <h1>Galería</h1>
+                </header>
+            </div>
+            <ParallaxBanner bgClassName="bg-[url('/back04.jpg')] bg-repeat-y" client:load className="h-auto">
+                <div class="backdrop-blur-md py-8 bg-yellow-500 bg-opacity-20">
+                    <div class="carousel">
+                        <div class="group">
+                            <img src="gallery/Among Us Icon.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/RevolverRanger.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Castle Crashers Icon 2.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Minecraft Icon.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Shattered Sword3.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Montgomery Gator B.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Room1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Asagiri gun.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Dualshock06.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/SirenHead.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/LowPolyMagnu8m.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/CarbineRender.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Rifle.png" class="card h-full w-auto object-cover" alt="">
+                        </div>
+                        <div class="group">
+                            <img src="gallery/Among Us Icon.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/RevolverRanger.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Castle Crashers Icon 2.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Minecraft Icon.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Shattered Sword3.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Montgomery Gator B.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Room1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Asagiri gun.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Dualshock06.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/SirenHead.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/LowPolyMagnu8m.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/CarbineRender.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Rifle.png" class="card h-full w-auto object-cover" alt="">
+                        </div>
+                    </div>
+
+                    <div class="carousel">
+                        <div class="group">
+                            <video src="gallery/animations/A Hand.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Bad Apple.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Dabloon Car Ep.010001-0700.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Intro Sin Audio.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/DoubleKickViewA0001-0080.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/VSP.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Dabloon Car Ep.010003-1010.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Soft & Wet.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                        </div>
+                        <div class="group">
+                            <video src="gallery/animations/A Hand.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Bad Apple.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Dabloon Car Ep.010001-0700.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Intro Sin Audio.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/DoubleKickViewA0001-0080.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/VSP.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Dabloon Car Ep.010003-1010.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                            <video src="gallery/animations/Soft & Wet.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
+                        </div>
+                    </div>
+
+                    <div class="carousel">
+                        <div class="group">
+                            <img src="gallery/ArmoredTitan1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Diorama1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Hero Of The Village Link 03.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Metroid.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/RenderLenin.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/The World 01.png" class="card h-full w-auto object-cover" alt="">
+                        </div>
+                        <div class="group">
+                            <img src="gallery/ArmoredTitan1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Diorama1.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Hero Of The Village Link 03.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/Metroid.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/RenderLenin.png" class="card h-full w-auto object-cover" alt="">
+                            <img src="gallery/The World 01.png" class="card h-full w-auto object-cover" alt="">
+                        </div>
+                    </div>
+                </div>
+            </ParallaxBanner>
+        </section> -->
     </div>
-    <div class="flex justify-center items-center">
-        <video
-        class="ease-in-out object-center object-cover h-[30vh] w-[100vw] "
-        autoplay=""
-        loop=""
-        muted=""
-        playsinline=""
-    >
-        <source src="/videos/3ds001.mp4" type="video/mp4" />
-    </video>
-    </div>
-    <div class="text-white p-10 max-w-7xl w-full mx-auto my-5 h-[40vh] ">
-            <h1 class="text-4xl text-white font-agave text-center pt-3">Mi arte y conocimientos</h1>
-            <h2 class="text-lg text-blue-400 text-center pb-3"><b>¿Por qué elegirme a mí?</b></h2><br>
-            <h4 class="w-[60vw]">Adéntrate a revisar mi trabajo en animación y modelaje 3D. Estoy certificado como generalista 3D en Blender,
-                lo que significa que tengo los fundamentos del modelaje, animación, esculpido digital, efectos especiales y creación de assets
-                para juegos.
-            </h4>
-            <h4 class="w-[60vw]">
-                Aspiro a crear contenido de calidad en forma de animaciones con narrativa única o con propósito publicitario. Asímismo,
-                busco realizar modelos de personaje y entornos para el desarrollo de juegos.
-            </h4>
-    </div>
-    
-    <div class="flex-col justify-center items-center columns-2 m-0">
-        <div class="flex justify-center items-center">
-            <video
-                class="ease-in-out object-cover h-[30vh] w-[50vw]"
-                autoplay=""
-                loop=""
-                muted=""
-                playsinline=""
-            >
-                <source src="/videos/dbc.mp4" type="video/mp4" />
-            </video>
-        </div>
-        <div class="flex justify-center items-center">
-            <video
-                class="ease-in-out object-cover h-[30vh] w-[50vw] bg-center"
-                autoplay=""
-                loop=""
-                muted=""
-                playsinline=""
-            >
-                <source src="/videos/Intro Sin Audio.mp4" type="video/mp4" />
-            </video>
-        </div>
-    </div>
-    
 </PageLayout>

@@ -1,15 +1,15 @@
 <template>
-    <div class="py-6">
+    <div class="my-auto py-6">
         <video :src="`/brands/${video}`" alt=""
-            class="bg-blue-500 bg-opacity-0 w-full rounded-3xl my-5 mx-2 md:h-[30vh]  "
+            class="bg-neutral-700 rounded-3xl my-auto mx-auto w-48 h-auto object-cover"
             autoplay=""
             loop=""
             muted=""
             playsinline="">
         </video>
         <div class="py-4 text-white">
-            <h3 class="text-2xl">{{ title }}</h3>
-            <p>{{ description }}</p>
+            <h3 class="text-2xl p-4">{{ title }}</h3>
+            <p class="text-justify">{{ description }}</p>
         </div>
     </div>
 </template>
