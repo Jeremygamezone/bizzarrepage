@@ -3,8 +3,11 @@ import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import vue from "@astrojs/vue";
 import icon from "astro-icon";
+import github from '@astrojs/github-pages';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), vue(), icon()]
+  site: 'https://jeremygamezone.github.io',
+  base: '/bizzarrepage/',
+  integrations: [tailwind(), react(), vue(), icon(),github()]
 });
