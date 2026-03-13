@@ -2628,9 +2628,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bizarre portfolio@workspace:.":
+"bizarreportfolio@workspace:.":
   version: 0.0.0-use.local
-  resolution: "bizarre portfolio@workspace:."
+  resolution: "bizarreportfolio@workspace:."
   dependencies:
     "@astrojs/check": "npm:0.7.0"
     "@astrojs/react": "npm:3.6.0"
