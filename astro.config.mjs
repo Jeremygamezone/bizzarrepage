@@ -4,9 +4,8 @@ import react from "@astrojs/react";
 import vue from "@astrojs/vue";
 import icon from "astro-icon";
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://jeremygamezone.github.io',
+  site: 'https://jeremygamezone.github.io/',
   base: '/bizzarrepage/',
   integrations: [tailwind(), react(), vue(), icon()]
 });

@@ -74,19 +74,19 @@ const metadata: IMetadata = {
 
                     <div class="py-4" id="CV">
                         <h2 class="text-3xl py-4">¡Revisa mi CV!</h2>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-3 mx-auto">
+                        <div class="grid grid-cols-1 mx-auto">
                             <a
-                                href="public/JPCADEVCV3.pdf"
+                                href="public/JPCADESCV3.pdf"
                                 download="CVSpanish.pdf"
-                                class="lg bg-gradient-to-b from-red-400 to-red-800 text-white py-4 block rounded w-40 h-16 text-lg mx-auto my-8"
-                                >CV español</a
+                                class="lg bg-gradient-to-b from-orange-400 to-orange-800 text-white py-4 block rounded w-40 h-16 text-lg mx-auto my-8"
+                                >Currículum</a
                             >
-                            <a
+                            <!-- <a
                                 href="public/JPCADEVCVE3.pdf"
                                 download="CVEnglish.pdf"
                                 class="lg bg-gradient-to-b from-blue-400 to-blue-800 text-white py-4 block rounded w-40 h-16 text-lg mx-auto my-8"
                                 >CV inlgés</a
-                            >
+                            > -->
                         </div>
                     </div>
                 </div>
@@ -122,10 +122,10 @@ const metadata: IMetadata = {
 
         <section id="portafolio" class="bg-neutral-900 text-white text-center font-normal">
             <div class="w-4/5 md:w-3/4 mx-auto py-8 px-8">
-                <header class="text-4xl font-semibold">
+                <header class="text-4xl font-semibold m-4 py-4">
                     <h1>Portafolio</h1>
                 </header>
-                <p class="text-2xl text-left md:text-justify font-normal">
+                <p class="text-2xl text-left md:text-justify font-normal py-6">
                     He trabajado en una amplia variedad de áreas informáticas y de diseño, enfocando gran parte de mi
                     experiencia en la creación de soluciones digitales que se ajustan la necesidad de cada cliente. A lo
                     largo de mi trayectoria he participado en proyectos que abarcan implementaciones de diseño,
@@ -202,91 +202,4 @@ const metadata: IMetadata = {
             </ParallaxBanner>
         </section>
     </div>
-
-    <!-- <section id="galeria" class="bg-neutral-900 text-white text-center font-normal">
-            <div class="mx-auto py-8">
-                <header class="text-4xl font-semibold">
-                    <h1>Galería</h1>
-                </header>
-            </div>
-            <ParallaxBanner bgClassName="bg-[url('/public/back04.jpg')] bg-repeat-y" client:load className="h-auto">
-                <div class="backdrop-blur-md py-8 bg-yellow-500 bg-opacity-20">
-                    <div class="carousel">
-                        <div class="group">
-                            <img src="gallery/Among Us Icon.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/RevolverRanger.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Castle Crashers Icon 2.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Minecraft Icon.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Shattered Sword3.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Montgomery Gator B.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Room1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Asagiri gun.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Dualshock06.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/SirenHead.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/LowPolyMagnu8m.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/CarbineRender.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Rifle.png" class="card h-full w-auto object-cover" alt="">
-                        </div>
-                        <div class="group">
-                            <img src="gallery/Among Us Icon.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/RevolverRanger.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Castle Crashers Icon 2.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Minecraft Icon.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Shattered Sword3.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Montgomery Gator B.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Room1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Asagiri gun.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Dualshock06.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/SirenHead.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/LowPolyMagnu8m.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/CarbineRender.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Rifle.png" class="card h-full w-auto object-cover" alt="">
-                        </div>
-                    </div>
-
-                    <div class="carousel">
-                        <div class="group">
-                            <video src="gallery/animations/A Hand.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Bad Apple.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Dabloon Car Ep.010001-0700.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Intro Sin Audio.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/DoubleKickViewA0001-0080.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/VSP.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Dabloon Car Ep.010003-1010.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Soft & Wet.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                        </div>
-                        <div class="group">
-                            <video src="gallery/animations/A Hand.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Bad Apple.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Dabloon Car Ep.010001-0700.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Intro Sin Audio.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/DoubleKickViewA0001-0080.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/VSP.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Dabloon Car Ep.010003-1010.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                            <video src="gallery/animations/Soft & Wet.mp4" class="card h-full w-auto object-cover" autoplay="" muted loop></video>
-                        </div>
-                    </div>
-
-                    <div class="carousel">
-                        <div class="group">
-                            <img src="gallery/ArmoredTitan1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Diorama1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Hero Of The Village Link 03.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Metroid.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/RenderLenin.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/The World 01.png" class="card h-full w-auto object-cover" alt="">
-                        </div>
-                        <div class="group">
-                            <img src="gallery/ArmoredTitan1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Diorama1.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Hero Of The Village Link 03.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/Metroid.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/RenderLenin.png" class="card h-full w-auto object-cover" alt="">
-                            <img src="gallery/The World 01.png" class="card h-full w-auto object-cover" alt="">
-                        </div>
-                    </div>
-                </div>
-            </ParallaxBanner>
-        </section> -->
 </PageLayout>
-<!-- HIDDEN -->
