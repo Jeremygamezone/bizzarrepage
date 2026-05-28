@@ -2,12 +2,10 @@
 import type { IMetadata } from '../types/Metadata';
 import PageLayout from '../layouts/PageLayout.astro';
 import ParallaxBanner from '../components/ParallaxBanner';
-import ProcessImg from '../components/proyectos/ProcessImg.vue';
-import ProcessVideo from '../components/proyectos/ProcessVideo.vue';
+import ProcessImg from '../components/proyectos/ProcessImg';
 
 const metadata: IMetadata = {
-    description: 'Pagina de presentacion para portafolio de Jeremy',
-    title: 'Bienvenido',
+    description: 'Pagina de presentacion para portafolio de Jeremy'
 };
 ---
 
@@ -57,18 +55,19 @@ const metadata: IMetadata = {
         }
     </style>
     <div id="main">
-        <!-- Hero Intro -->
         <ParallaxBanner bgClassName="bg-[url('/public/back01.jpg')] bg-repeat-y" client:load className="h-auto">
             <div class="text-center text-white backdrop-blur-md bg-red-800 bg-opacity-10 pt-8">
                 <div class="w-4/5 md:w-3/4 mx-auto py-8 px-8">
                     <div class="leading-relaxed w-full mx-auto py-4">
                         <h2 class="text-5xl my-12">Jeremy P. Castañeda Arceo</h2>
                         <h2 class="text-4xl text-left">Desarrollador, artista y entusiasta de la tecnología.</h2>
-                        <br />
                         <h2 class="text-2xl text-left md:text-justify font-normal py-4">
-                            Me especializo en la creación de aplicaciones web, campañas de marketing digital y gestión
+                            Poseo experiencia en la creación de aplicaciones web, campañas de marketing digital y gestión
                             de bases de datos, combinando desarrollo, soporte técnico e infraestructura para construir
                             soluciones digitales eficientes.
+                            <br>
+                            Por el otro lado, tengo conocimientos y habilidades que se ajustan a la medidad de quienes necesitan
+                            soluciones referentes a diseños, renderizados, animaciones y/o creación de personajes.
                         </h2>
                     </div>
 
@@ -119,7 +118,6 @@ const metadata: IMetadata = {
                 </div>
             </div>
         </ParallaxBanner>
-
         <section id="portafolio" class="bg-neutral-900 text-white text-center font-normal">
             <div class="w-4/5 md:w-3/4 mx-auto py-8 px-8">
                 <header class="text-4xl font-semibold m-4 py-4">
@@ -143,59 +141,12 @@ const metadata: IMetadata = {
                 <div class="justify-center w-full h-full bg-purple-900 bg-opacity-20 backdrop-blur-md">
                     <div class="w-4/5 md:w-3/4 mx-auto py-8 bg-black bg-opacity-60">
                         <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 mx-auto justify-items-center">
-                            <a href="https://warehouse.rayopack.com/" target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/rayo02.jfif"
-                                    title="Rayopack Warehouse"
-                                    description="Sistema web con administración de registros, rastreo de paquetes e inventario."
-                                /></a
-                            >
-                            <!-- <a href="https://bonefish.com.mx/" target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/bonefish.jpg"
-                                    title="Bonefish x Sneaker Fever"
-                                    description="Campaña de Marketing digital para la marca Bonefish celebrando su participación en el evento Sneaker Fever 2025."
-                                /></a
-                            >  -->
-                            <ProcessImg
-                                imgName="/public/brands/blender.png"
-                                title="Comisión personalizada"
-                                description="Servicio personalizado orientado a la creación de modelos y animaciones personales"
-                            />
-
-                            <a href="https://vspcomputer.mx/" target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/VSP01.png"
-                                    title="VSP Hikvision "
-                                    description="Campaña de Marketing digital para la marca VSP anunciando su colaboración con Hikvision para distribuir e instalar su producto."
-                                /></a
-                            >
-
-                            <a href="https://laflordemayoneveria.com/" target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/flor.png"
-                                    title="Flor de mayo neveria"
-                                    description="Elaboración de página web con sección de menú para mayor alcance en la red."
-                                /></a
-                            >
-
-                            <a href="https://www.autenticademipueblo.com/" target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/tequila.png"
-                                    title="Autentica de mi pueblo"
-                                    description="Elaboración de página web con sección de productos y fichas técnicas para su promoción."
-                                /></a
-                            >
-
-                            <a
-                                href="https://open.spotify.com/intl-es/artist/5eWaavRvzbhNII6GnAXkGf?si=1503dca062174125"
-                                target="_blank"
-                                ><ProcessImg
-                                    imgName="/public/brands/portada01B.png"
-                                    title="Chokodrillo"
-                                    description="Creación de contenido multimedia y realización de portadas para sencillos musicales. "
-                                /></a
-                            >
+                                <ProcessImg imgName='/public/brands/warehouse.png' link='https://warehouse.rayopack.com/' title='RAYOPACK WAREHOUSE' description='Sistema web con administración de registros, rastreo de paquetes e inventario.'></ProcessImg>
+                                <ProcessImg imgName='/public/brands/blender.png' title='Comisión personalizada' description='Servicio personalizado orientado a la creación de modelos y animaciones personales.'></ProcessImg>
+                                <ProcessImg imgName='/public/brands/vsp01.png' link="" title='VSP Hikvision' description='Campaña de Marketing digital para la marca VSP anunciando su colaboración con Hikvision para distribuir e instalar su producto.'></ProcessImg>
+                                <ProcessImg imgName='/public/brands/flor.png' link='https://laflordemayoneveria.com/' title='Flor de mayo neveria' description='Elaboración de página web con sección de menú para mayor alcance en la red.'></ProcessImg>
+                                <ProcessImg imgName='/public/brands/tequila.png' link='https://www.autenticademipueblo.com/' title='Autentica de mi pueblo' description='Elaboración de página web con sección de productos y fichas técnicas para su promoción.'></ProcessImg>
+                                <ProcessImg imgName='/public/brands/choko1.png' link='https://open.spotify.com/intl-es/artist/5eWaavRvzbhNII6GnAXkGf?si=1503dca062174125' title='Chokodrillo' description='Creación de contenido multimedia y realización de portadas para sencillos musicales.'></ProcessImg>
                         </div>
                     </div>
                 </div>
